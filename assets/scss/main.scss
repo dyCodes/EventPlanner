@@ -2,6 +2,15 @@
 @import "./base";
 @import "./layout";
 
+.section_title {
+  padding-bottom: 10px;
+  h2 {
+    text-transform: uppercase;
+  }
+  p {
+    text-transform: capitalize;
+  }
+}
 // HERO SECTION
 #hero {
   height: 100vh;
@@ -48,3 +57,31 @@
     }
   }
 }
+// SERVICES SECTION
+#services {
+  .card {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+
+    img {
+      height: 320px;
+      object-fit: cover;
+      transition: 0.8s 0.1s;
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
+    .card-body {
+      z-index: 1;
+      background: #fff;
+
+      .card-title {
+        font-size: 1.45rem;
+        color: #333;
+      }
+    }
+  }
+}
+// ABOUT SECTION
+// #about {
+// }
