@@ -1,0 +1,86 @@
+// HEADER
+header {
+  #topbar {
+    height: 40px;
+    color: #fff;
+    padding: 0;
+    font-size: 14px;
+    transition: all 0.5s;
+    background: #d2b907;
+
+    .contact-info i {
+      font-style: normal;
+      a,
+      span {
+        color: #fff;
+        padding-left: 5px;
+      }
+    }
+    .social-links a {
+      color: #fff;
+      line-height: 0;
+      transition: 0.3s;
+      margin-left: 20px;
+    }
+  }
+
+  .navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: rgba(0, 0, 0, 0.25);
+
+    .logo {
+      max-width: 185px;
+    }
+
+    .navbar-toggler {
+      border: none !important;
+      box-shadow: none !important;
+      font-size: 35px;
+      color: #fff;
+    }
+
+    .navbar-collapse {
+      a.nav-link {
+        color: #fff;
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 15px;
+
+        &.active,
+        &:hover {
+          color: $mainColor !important;
+        }
+      }
+    }
+  }
+  // RESPONSIVE STYLES
+  @include mobile {
+    .navbar-collapse ul {
+      background: #fff;
+
+      li {
+        padding: 6px 10px;
+        border-bottom: 1px solid #ddd;
+        a.nav-link {
+          color: #222 !important;
+        }
+      }
+    }
+  }
+}
+// MAIN
+main > section {
+  margin: 60px 0;
+}
+// FOOTER
+footer {
+  color: #bbb;
+  padding: 10px;
+  background: #222;
+  text-align: center;
+
+  .container .col-md-6 {
+    margin: 10px auto;
+  }
+}

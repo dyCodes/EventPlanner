@@ -1,0 +1,15 @@
+// COLORS
+$mainColor: #e7d34a;
+$black: #222;
+
+// MIXINS
+@mixin grid_center {
+  display: grid;
+  place-content: center;
+}
+
+@mixin mobile {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
