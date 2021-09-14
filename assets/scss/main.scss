@@ -1,3 +1,50 @@
 @import "./config";
 @import "./base";
 @import "./layout";
+
+// HERO SECTION
+#hero {
+  height: 100vh;
+  position: relative;
+  min-height: 480px;
+  max-height: 740px;
+  background: #222;
+
+  .hero_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .content {
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding-top: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include grid_center;
+    background: rgba(17, 17, 17, 0.7);
+
+    h1,
+    h2 {
+      text-shadow: 0 0 3px #222;
+    }
+    h2 {
+      margin: 15px 0 30px;
+      font-size: 20px;
+      font-weight: 300;
+      color: #eee;
+      max-width: 730px;
+    }
+    a {
+      display: inline-block;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 15px;
+      padding: 10px 40px;
+      letter-spacing: 1px;
+      border-radius: 3px;
+    }
+  }
+}
