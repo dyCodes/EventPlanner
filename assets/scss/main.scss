@@ -2,16 +2,22 @@
 @import "./base";
 @import "./layout";
 
-.section_title {
-  padding-bottom: 10px;
-  h2 {
-    text-transform: uppercase;
-  }
-  p {
-    text-transform: capitalize;
+/*!----- MAIN -------*/
+main > section {
+  margin: 70px 0;
+
+  .section_title {
+    padding-bottom: 10px;
+    h2 {
+      text-transform: uppercase;
+    }
+    p {
+      text-transform: capitalize;
+    }
   }
 }
-// HERO SECTION
+
+/*!----- HERO SECTION -------*/
 #hero {
   height: 100vh;
   position: relative;
@@ -57,7 +63,8 @@
     }
   }
 }
-// SERVICES SECTION
+
+/*!----- SERVICES SECTION -------*/
 #services {
   .card {
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
@@ -82,6 +89,85 @@
     }
   }
 }
-// ABOUT SECTION
-// #about {
-// }
+
+/*!----- ABOUT SECTION -------*/
+#about {
+  padding: 90px 10px;
+  position: relative;
+  background: url("../img/gallery/event-location.jpg") center center;
+  background-size: cover;
+  // OVERLAY
+  &:before {
+    content: "";
+    background: rgba(17, 17, 17, 0.95);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  // ABOUT IMAGE
+  .about_img {
+    position: relative;
+    transition: 0.6s 0.1s;
+
+    img {
+      border: 1px solid #444;
+    }
+    &:before {
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 60px;
+      height: 60px;
+      z-index: 1;
+      content: "";
+      border-left: 3px solid $mainColor;
+      border-top: 3px solid $mainColor;
+      transition: 0.5s;
+    }
+    &:after {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      width: 60px;
+      height: 60px;
+      z-index: 2;
+      content: "";
+      border-right: 3px solid $mainColor;
+      border-bottom: 3px solid $mainColor;
+      transition: 0.5s;
+    }
+    // HOVERS
+    &:hover {
+      transform: scale(1.05);
+    }
+    &:hover::before {
+      left: 10px;
+      top: 10px;
+    }
+    &:hover::after {
+      right: 10px;
+      bottom: 10px;
+    }
+  }
+  // ABOUT CONTENT
+  .content {
+    z-index: 1;
+
+    .section_title {
+      font-size: 18px;
+      padding-bottom: 5px;
+      color: #eee;
+      &:after {
+        display: block;
+        content: "";
+        width: 45px;
+        height: 2px;
+        margin-top: 6px;
+        margin-bottom: 10px;
+        background-color: $mainColor;
+      }
+    }
+  }
+}

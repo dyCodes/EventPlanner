@@ -1,4 +1,4 @@
-// HEADER
+/*!----- HEADER -------*/
 header {
   #topbar {
     height: 40px;
@@ -54,7 +54,7 @@ header {
       }
     }
   }
-  // RESPONSIVE STYLES
+  /*!----- RESPONSIVE STYLES -------*/
   @include mobile {
     .navbar-collapse ul {
       background: #fff;
@@ -69,11 +69,7 @@ header {
     }
   }
 }
-// MAIN
-main > section {
-  margin: 70px 0;
-}
-// FOOTER
+/*!----- FOOTER -------*/
 footer {
   color: #bbb;
   padding: 10px;
