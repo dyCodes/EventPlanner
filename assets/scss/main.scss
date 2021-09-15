@@ -182,3 +182,34 @@ main > section {
     }
   }
 }
+
+/*!----- GALLERY SECTION -------*/
+#gallery {
+  .gallery_item {
+    height: 240px;
+    overflow: hidden;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+#glightbox-body {
+  .gslide-media img {
+    padding-top: 15px;
+  }
+  .gslide-description {
+    text-align: center;
+    background: transparent;
+    .gslide-desc {
+      color: #fff;
+      width: fit-content;
+      margin: auto;
+      padding: 5px 20px;
+      background: #222;
+    }
+  }
+}

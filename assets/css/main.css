@@ -319,3 +319,36 @@ main > section .section_title p {
 #about .content p {
   color: #ddd;
 }
+
+/*!----- GALLERY SECTION -------*/
+#gallery .gallery_item {
+  height: 240px;
+  overflow: hidden;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+}
+
+#gallery .gallery_item img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#glightbox-body .gslide-media img {
+  padding-top: 15px;
+}
+
+#glightbox-body .gslide-description {
+  text-align: center;
+  background: transparent;
+}
+
+#glightbox-body .gslide-description .gslide-desc {
+  color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  padding: 5px 20px;
+  background: #222;
+}

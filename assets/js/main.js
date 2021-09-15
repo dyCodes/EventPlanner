@@ -7,3 +7,7 @@
 * License: https://dycodes.github.com/EventPlanner/license
 *---------------------------------
 */
+
+ const galleryLightbox = GLightbox({
+    selector: '.glightbox'
+  });
