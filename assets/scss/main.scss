@@ -2,21 +2,6 @@
 @import "./base";
 @import "./layout";
 
-/*!----- MAIN -------*/
-main > section {
-  margin: 70px 0;
-
-  .section_title {
-    padding-bottom: 10px;
-    h2 {
-      text-transform: uppercase;
-    }
-    p {
-      text-transform: capitalize;
-    }
-  }
-}
-
 /*!----- HERO SECTION -------*/
 #hero {
   height: 100vh;
@@ -64,11 +49,28 @@ main > section {
   }
 }
 
+/*!----- MAIN -------*/
+main > section {
+  margin: 80px 0;
+
+  .section_title {
+    text-align: center;
+    padding-bottom: 10px;
+
+    h2 {
+      text-transform: uppercase;
+    }
+    p {
+      text-transform: capitalize;
+    }
+  }
+}
+
 /*!----- SERVICES SECTION -------*/
 #services {
   .card {
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
     overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
 
     img {
       height: 320px;
@@ -80,11 +82,16 @@ main > section {
     }
     .card-body {
       z-index: 1;
+      padding: 20px;
       background: #fff;
 
       .card-title {
-        font-size: 1.45rem;
+        font-size: 1.35rem;
         color: #333;
+      }
+      .card-text {
+        font-size: 15px;
+        margin-top: 14px;
       }
     }
   }
@@ -124,7 +131,7 @@ main > section {
       content: "";
       border-left: 3px solid $mainColor;
       border-top: 3px solid $mainColor;
-      transition: 0.5s;
+      transition: 0.5s 0.1s;
     }
     &:after {
       position: absolute;
@@ -136,7 +143,7 @@ main > section {
       content: "";
       border-right: 3px solid $mainColor;
       border-bottom: 3px solid $mainColor;
-      transition: 0.5s;
+      transition: 0.5s 0.1s;
     }
     // HOVERS
     &:hover {
@@ -156,9 +163,10 @@ main > section {
     z-index: 1;
 
     .section_title {
+      color: #ddd;
       font-size: 18px;
+      text-align: left;
       padding-bottom: 5px;
-      color: #eee;
       &:after {
         display: block;
         content: "";
@@ -168,6 +176,9 @@ main > section {
         margin-bottom: 10px;
         background-color: $mainColor;
       }
+    }
+    p {
+      color: #ddd;
     }
   }
 }

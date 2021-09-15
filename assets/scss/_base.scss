@@ -14,10 +14,15 @@
   list-style-type: none;
   text-decoration: none;
 }
-
+body {
+  color: #222;
+}
 a {
   text-decoration: none;
 }
 img {
   width: 100%;
+}
+p {
+  color: $textColor;
 }

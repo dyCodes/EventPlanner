@@ -14,12 +14,20 @@
   text-decoration: none;
 }
 
+body {
+  color: #222;
+}
+
 a {
   text-decoration: none;
 }
 
 img {
   width: 100%;
+}
+
+p {
+  color: #444;
 }
 
 /*!----- HEADER -------*/
@@ -109,23 +117,6 @@ footer .container .col-md-6 {
   margin: 10px auto;
 }
 
-/*!----- MAIN -------*/
-main > section {
-  margin: 70px 0;
-}
-
-main > section .section_title {
-  padding-bottom: 10px;
-}
-
-main > section .section_title h2 {
-  text-transform: uppercase;
-}
-
-main > section .section_title p {
-  text-transform: capitalize;
-}
-
 /*!----- HERO SECTION -------*/
 #hero {
   height: 100vh;
@@ -179,11 +170,29 @@ main > section .section_title p {
   border-radius: 3px;
 }
 
+/*!----- MAIN -------*/
+main > section {
+  margin: 80px 0;
+}
+
+main > section .section_title {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+main > section .section_title h2 {
+  text-transform: uppercase;
+}
+
+main > section .section_title p {
+  text-transform: capitalize;
+}
+
 /*!----- SERVICES SECTION -------*/
 #services .card {
+  overflow: hidden;
   -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
 }
 
 #services .card img {
@@ -201,12 +210,18 @@ main > section .section_title p {
 
 #services .card .card-body {
   z-index: 1;
+  padding: 20px;
   background: #fff;
 }
 
 #services .card .card-body .card-title {
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   color: #333;
+}
+
+#services .card .card-body .card-text {
+  font-size: 15px;
+  margin-top: 14px;
 }
 
 /*!----- ABOUT SECTION -------*/
@@ -247,8 +262,8 @@ main > section .section_title p {
   content: "";
   border-left: 3px solid #e7d34a;
   border-top: 3px solid #e7d34a;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s 0.1s;
+  transition: 0.5s 0.1s;
 }
 
 #about .about_img:after {
@@ -261,8 +276,8 @@ main > section .section_title p {
   content: "";
   border-right: 3px solid #e7d34a;
   border-bottom: 3px solid #e7d34a;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s 0.1s;
+  transition: 0.5s 0.1s;
 }
 
 #about .about_img:hover {
@@ -285,9 +300,10 @@ main > section .section_title p {
 }
 
 #about .content .section_title {
+  color: #ddd;
   font-size: 18px;
+  text-align: left;
   padding-bottom: 5px;
-  color: #eee;
 }
 
 #about .content .section_title:after {
@@ -298,4 +314,8 @@ main > section .section_title p {
   margin-top: 6px;
   margin-bottom: 10px;
   background-color: #e7d34a;
+}
+
+#about .content p {
+  color: #ddd;
 }
