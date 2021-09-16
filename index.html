@@ -365,12 +365,21 @@
                   <input
                     type="text"
                     class="form-control"
-                    name="subject"
-                    id="subject"
-                    placeholder="Subject"
+                    name="phone"
+                    id="phone"
+                    placeholder="Your Phone Number"
                     required=""
                   />
                 </div>
+                <div class="form-group">
+                  <select class="form-select" required>
+                    <option selected="">Your Event Type</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="2">Corporate Event</option>
+                    <option value="2">Social Event</option>
+                  </select>
+                </div>
+
                 <div class="form-group">
                   <textarea
                     class="form-control"
@@ -380,10 +389,13 @@
                     required=""
                   ></textarea>
                 </div>
-                <!-- <div class="alert alert-primary" role="alert">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div>Your message has been sent. Thank you!</div>
+                <!-- <div class="status">
+                  <div class="alert alert-success" role="alert">
+                    <div>Your message has been sent. Thank you!</div>
+                  </div>
+                  <div class="alert alert-danger" role="alert">
+                    <div class="error-message">Error! Message not sent.</div>
+                  </div>
                 </div> -->
                 <div>
                   <button type="submit" class="btn btn-dark">

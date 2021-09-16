@@ -257,7 +257,7 @@ main > section {
       border-radius: 4px;
       border: 1px solid #eaeaea;
       background: #fff;
-      box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.12);
+      box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.08);
 
       i.bi {
         display: inline-grid;
@@ -266,6 +266,40 @@ main > section {
         margin-bottom: 20px;
         border-radius: 50%;
         background: #ddd;
+      }
+    }
+  }
+  .row.contactBox {
+    margin: 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+
+    .map {
+      padding: 0 !important;
+      background: #aaa;
+      iframe {
+        min-height: 360px;
+      }
+    }
+    .form {
+      padding: 40px 20px;
+      form > div {
+        margin-bottom: 20px;
+        & > .mt-lg-0 {
+          margin-top: 20px;
+        }
+      }
+      .form-control,
+      .form-select {
+        color: #444;
+        border-radius: 2px;
+        padding: 12px 15px;
+        font-size: 13px;
+        box-shadow: none;
+      }
+      button {
+        padding: 8px 40px;
+        border-radius: 2px;
       }
     }
   }
