@@ -57,6 +57,15 @@ window.onscroll = function() {
 	}
 };
 
+// Scroll to section with hash link in the url on page load
+window.addEventListener('load', () => {
+	if (window.location.hash) {
+		if (selectElem(window.location.hash)) {
+			scrollto(window.location.hash);
+		}
+	}
+});
+
 // GALLERY LIGHT INIT
 const galleryLightbox = GLightbox({
 	selector: '.glightbox'
