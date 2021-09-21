@@ -34,50 +34,58 @@
   <!------- Header ------->
   <header id="header" class="">
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
       <div class="container">
+        <!-- Logo -->
         <a class="logo" href="/">
           <img src="/assets/img/logo.png" alt="EventPlanner" />
         </a>
+
+        <!-- Mobile Toggle Button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
           aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
           <i class="bi bi-list mobile-nav-toggle"></i>
         </button>
+
+        <!-- Nav Links -->
         <div class="collapse navbar-collapse justify-content-md-end" id="navbarContent">
           <ul class="navbar-nav mt-3 mt-lg-0">
-            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <li><a class="nav_link active" href="#hero">Home</a></li>
+            <li><a class="nav_link" href="#about">About</a></li>
             <li>
-              <a class="nav-link scrollto" href="#services">Services</a>
+              <a class="nav_link" href="#services">Services</a>
             </li>
             <li>
-              <a class="nav-link scrollto" href="#portfolio">Gallery</a>
+              <a class="nav_link" href="#gallery">Gallery</a>
             </li>
-            <li><a class="nav-link scrollto" href="#team">Contact</a></li>
+            <li><a class="nav_link" href="#contact">Contact</a></li>
           </ul>
         </div>
+
       </div>
     </nav>
   </header>
   <!-- End Header -->
 
-  <!------- Hero Section ------->
-  <section id="hero" class="">
-    <img class="hero_image" src="/assets/img/hero-image-1.jpg" alt="Wedding Photo" />
-    <div class="content text-center">
-      <div class="container">
-        <h1 class="display-4 fw-normal">We Bring Your Events To Life</h1>
-        <h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-          eos accusamus tempora laudantium eligendi.
-        </h2>
-        <a class="btn btn-light" href="#contact">Contact Us</a>
-      </div>
-    </div>
-  </section>
-  <!-- End Hero -->
+  <!------- Main ------->
+  <main>
 
-  <main id="main">
+    <!------- Hero Section ------->
+    <section id="hero">
+      <img class="hero_image" src="/assets/img/hero-image-1.jpg" alt="Wedding Photo" />
+      <div class="content text-center">
+        <div class="container">
+          <h1 class="display-4 fw-normal">We Bring Your Events To Life</h1>
+          <h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+            eos accusamus tempora laudantium eligendi.
+          </h2>
+          <a class="btn btn-light" href="#contact">Contact Us</a>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
     <!------- Services Section ------->
     <section id="services" class="services">
       <div class="container" data-aos="fade-up">
@@ -319,7 +327,7 @@
     </section>
     <!-- End Contact Section -->
   </main>
-  <!-- End #main -->
+  <!-- End Main -->
 
   <!------- Footer ------->
   <footer>

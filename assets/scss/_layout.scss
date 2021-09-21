@@ -42,11 +42,11 @@ header {
 		}
 
 		.navbar-collapse {
-			a.nav-link {
+			a.nav_link {
 				color: #fff;
 				font-weight: 600;
 				font-size: 16px;
-				margin-left: 15px;
+				margin-left: 25px;
 
 				&.active,
 				&:hover {
@@ -56,7 +56,7 @@ header {
 		}
 	}
 	&.onScroll .navbar {
-		background: #1c1c1c;
+		background: #151515;
 		box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 	}
 	/*!----- RESPONSIVE STYLES -------*/
@@ -64,11 +64,14 @@ header {
 		.navbar-collapse ul {
 			background: #fff;
 
-			li {
-				padding: 6px 10px;
+			li a.nav_link {
+				color: #222 !important;
+				display: block;
+				padding: 12px;
+				margin: 0 !important;
 				border-bottom: 1px solid #ddd;
-				a.nav-link {
-					color: #222 !important;
+				&:hover {
+					background: #f5f5f5;
 				}
 			}
 		}

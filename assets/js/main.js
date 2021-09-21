@@ -8,6 +8,7 @@
  *---------------------------------
  */
 
+// DOM Selector helper function
 const selectElem = (elem, all = false) => {
 	elem = elem.trim();
 	if (all) {
@@ -17,6 +18,33 @@ const selectElem = (elem, all = false) => {
 	}
 };
 
+//  Scrolls to an element with header offset
+const scrollto = elem => {
+	let elementPos = selectElem(elem).offsetTop;
+	// header offset - 60
+	window.scrollTo({
+		top: elementPos - 60,
+		behavior: 'smooth'
+	});
+};
+
+// Remove the active class from all navlinks
+const clearActiveClass = () => {
+	navLinks.forEach(navLink => navLink.classList.remove('active'));
+};
+//  Scroll to target section on navlink click
+let navLinks = selectElem('#navbar li a', true);
+navLinks.forEach(navLink => {
+	navLink.addEventListener('click', e => {
+		e.preventDefault();
+		scrollto(navLink.hash);
+		clearActiveClass();
+		selectElem('#navbarContent').classList.remove('show');
+		navLink.classList.add('active');
+	});
+});
+
+// Window onScroll Event
 window.onscroll = function() {
 	let header = selectElem('#header');
 	let currentPos = window.pageYOffset;
@@ -29,6 +57,7 @@ window.onscroll = function() {
 	}
 };
 
+// GALLERY LIGHT INIT
 const galleryLightbox = GLightbox({
 	selector: '.glightbox'
 });
