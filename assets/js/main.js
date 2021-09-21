@@ -8,7 +8,9 @@
  *---------------------------------
  */
 
-// DOM Selector helper function
+/***
+ * DOM Selector helper function
+ */
 const selectElem = (elem, all = false) => {
 	elem = elem.trim();
 	if (all) {
@@ -18,7 +20,9 @@ const selectElem = (elem, all = false) => {
 	}
 };
 
-//  Scrolls to an element with header offset
+/***
+ * Scrolls to an element with header offset
+ */
 const scrollto = elem => {
 	let elementPos = selectElem(elem).offsetTop;
 	// header offset - 60
@@ -28,37 +32,46 @@ const scrollto = elem => {
 	});
 };
 
-// Remove the active class from all navlinks
-const clearActiveClass = () => {
-	navLinks.forEach(navLink => navLink.classList.remove('active'));
-};
-//  Scroll to target section on navlink click
-let navLinks = selectElem('#navbar li a', true);
+/***
+ * Scroll to target section on navlink click
+ */
+let navLinks = selectElem('#navbar .nav_link', true);
 navLinks.forEach(navLink => {
 	navLink.addEventListener('click', e => {
 		e.preventDefault();
 		scrollto(navLink.hash);
-		clearActiveClass();
+		// Remove the active class from all navlinks
+		navLinks.forEach(navLink => navLink.classList.remove('active'));
 		selectElem('#navbarContent').classList.remove('show');
 		navLink.classList.add('active');
 	});
 });
 
-// Window onScroll Event
-window.onscroll = function() {
+/***
+ * Header fixed top on scroll
+ */
+const headerOnScrollEffect = params => {
 	let header = selectElem('#header');
-	let currentPos = window.pageYOffset;
-
-	// Header fixed top on scroll
-	if (currentPos > 50) {
+	if (window.pageYOffset > 50) {
 		header.classList.add('onScroll');
 	} else {
 		header.classList.remove('onScroll');
 	}
 };
 
-// Scroll to section with hash link in the url on page load
+/***
+ * Window onScroll Event
+ */
+window.addEventListener('scroll', () => {
+	// headerOnScrollEffect function call
+	headerOnScrollEffect();
+});
+
+/***
+ * Window onLoad Event
+ */
 window.addEventListener('load', () => {
+	// Scroll to section with hash link in the url on page load
 	if (window.location.hash) {
 		if (selectElem(window.location.hash)) {
 			scrollto(window.location.hash);
@@ -66,7 +79,9 @@ window.addEventListener('load', () => {
 	}
 });
 
-// GALLERY LIGHT INIT
+/***
+ * GALLERY LIGHT INIT
+ */
 const galleryLightbox = GLightbox({
 	selector: '.glightbox'
 });
