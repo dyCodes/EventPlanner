@@ -48,6 +48,25 @@ navLinks.forEach(navLink => {
 });
 
 /***
+ * Set navLinks active state on scroll
+ */
+const navLinksActive = () => {
+	let position = window.scrollY + 200;
+	navLinks.forEach(navLink => {
+		let section = selectElem(navLink.hash);
+		if (!section) return;
+		if (
+			position >= section.offsetTop &&
+			position <= section.offsetTop + section.offsetHeight
+		) {
+			navLink.classList.add('active');
+		} else {
+			navLink.classList.remove('active');
+		}
+	});
+};
+
+/***
  * Header fixed top on scroll
  */
 const headerOnScrollEffect = params => {
@@ -63,6 +82,8 @@ const headerOnScrollEffect = params => {
  * Window onScroll Event
  */
 window.addEventListener('scroll', () => {
+	// navLinksActive function call
+	navLinksActive();
 	// headerOnScrollEffect function call
 	headerOnScrollEffect();
 });
@@ -71,6 +92,8 @@ window.addEventListener('scroll', () => {
  * Window onLoad Event
  */
 window.addEventListener('load', () => {
+	// navLinksActive function call
+	navLinksActive();
 	// Scroll to section with hash link in the url on page load
 	if (window.location.hash) {
 		if (selectElem(window.location.hash)) {
