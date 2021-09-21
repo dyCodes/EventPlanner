@@ -23,7 +23,6 @@ header {
 			margin-left: 20px;
 		}
 	}
-
 	.navbar {
 		padding-top: 1rem;
 		padding-bottom: 1rem;
@@ -45,8 +44,10 @@ header {
 			a.nav_link {
 				color: #fff;
 				font-weight: 600;
-				font-size: 16px;
-				margin-left: 25px;
+				font-size: 18px;
+				padding: 5px;
+				margin-left: 20px;
+				letter-spacing: 0.2px;
 
 				&.active,
 				&:hover {
@@ -59,23 +60,6 @@ header {
 		background: #111;
 		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
 	}
-	/*!----- RESPONSIVE STYLES -------*/
-	@include mobile {
-		.navbar-collapse ul {
-			background: #fff;
-
-			li a.nav_link {
-				color: #222 !important;
-				display: block;
-				padding: 12px;
-				margin: 0 !important;
-				border-bottom: 1px solid #ddd;
-				&:hover {
-					background: #f5f5f5;
-				}
-			}
-		}
-	}
 }
 /*!----- FOOTER -------*/
 footer {
@@ -86,5 +70,25 @@ footer {
 
 	.container .col-md-6 {
 		margin: 10px auto;
+	}
+}
+/*!----- RESPONSIVE STYLES -------*/
+@include mobile {
+	header {
+		.navbar .navbar-collapse ul {
+			background: #fff;
+
+			a.nav_link {
+				color: #222;
+				display: block;
+				padding: 12px;
+				font-size: 16px;
+				margin: 0;
+				border-bottom: 1px solid #ddd;
+				&:hover {
+					background: #f5f5f5;
+				}
+			}
+		}
 	}
 }
