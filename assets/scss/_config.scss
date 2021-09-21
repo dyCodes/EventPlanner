@@ -4,12 +4,17 @@ $textColor: #444;
 
 // MIXINS
 @mixin grid_center {
-  display: grid;
-  place-content: center;
+	display: grid;
+	place-content: center;
 }
 
 @mixin mobile {
-  @media (max-width: 991px) {
-    @content;
-  }
+	@media (max-width: 991px) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media (min-width: 768px) {
+		@content;
+	}
 }

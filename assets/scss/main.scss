@@ -189,7 +189,7 @@ main > section {
 /*!----- GALLERY SECTION -------*/
 #gallery {
 	.gallery_item {
-		height: 240px;
+		height: 170px;
 		overflow: hidden;
 		margin-top: 10px;
 		border: 1px solid #ddd;
@@ -261,7 +261,7 @@ main > section {
 			border-radius: 4px;
 			border: 1px solid #eaeaea;
 			background: #fff;
-			box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.08);
+			box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.1);
 
 			i.bi {
 				display: inline-grid;
@@ -277,7 +277,7 @@ main > section {
 	.row.contactBox {
 		margin: 0;
 		border: 1px solid #ddd;
-		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+		box-shadow: 0 2px 24px rgba(0, 0, 0, 0.1);
 
 		.map {
 			padding: 0 !important;
@@ -317,5 +317,11 @@ main > section {
 				border-radius: 2px;
 			}
 		}
+	}
+}
+
+@include tablet {
+	#gallery .gallery_item {
+		height: 280px;
 	}
 }

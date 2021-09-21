@@ -56,8 +56,8 @@ header {
 		}
 	}
 	&.onScroll .navbar {
-		background: #151515;
-		box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+		background: #111;
+		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
 	}
 	/*!----- RESPONSIVE STYLES -------*/
 	@include mobile {
