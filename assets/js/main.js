@@ -69,12 +69,24 @@ const navLinksActive = () => {
 /***
  * Header fixed top on scroll
  */
-const headerOnScrollEffect = params => {
+const headerOnScrollEffect = () => {
 	let header = selectElem('#header');
 	if (window.pageYOffset > 50) {
 		header.classList.add('onScroll');
 	} else {
 		header.classList.remove('onScroll');
+	}
+};
+
+/***
+ * Show whatsapp button
+ */
+const WhatsappButton = () => {
+	let waButton = selectElem('#whatsapp_button');
+	if (window.pageYOffset > 500) {
+		waButton.classList.add('_show');
+	} else {
+		waButton.classList.remove('_show');
 	}
 };
 
@@ -86,6 +98,8 @@ window.addEventListener('scroll', () => {
 	navLinksActive();
 	// headerOnScrollEffect function call
 	headerOnScrollEffect();
+	// WhatsappButton function call
+	WhatsappButton();
 });
 
 /***

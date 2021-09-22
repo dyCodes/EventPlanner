@@ -70,6 +70,37 @@ footer {
 
 	.container .col-md-6 {
 		margin: 10px auto;
+		.bi {
+			font-size: 18px;
+		}
+	}
+}
+// WHATSAPP BUTTON
+#whatsapp_button {
+	position: fixed;
+	right: 7%;
+	bottom: 50px;
+	z-index: 10;
+	transition: 1s;
+	// hide button
+	transform: translateY(200px);
+
+	a {
+		display: block;
+		height: 55px;
+		width: 55px;
+		padding: 5px;
+		border-radius: 50%;
+		background: #25d366;
+		box-shadow: 0 0 18px -5px #25d366;
+
+		.bi-whatsapp {
+			color: #fff;
+			font-size: 30px;
+		}
+	}
+	&._show {
+		transform: translateY(0);
 	}
 }
 /*!----- RESPONSIVE STYLES -------*/
