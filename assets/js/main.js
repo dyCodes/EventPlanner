@@ -33,6 +33,14 @@ const scrollto = elem => {
 };
 
 /***
+ * Scroll to contact section on contact-us button click
+ */
+selectElem('#contact_btn').addEventListener('click', function(e) {
+	e.preventDefault();
+	scrollto(this.hash);
+});
+
+/***
  * Scroll to target section on navlink click
  */
 let navLinks = selectElem('#navbar .nav_link', true);
