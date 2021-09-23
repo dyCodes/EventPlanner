@@ -1,31 +1,32 @@
 <!-- EventPlanner -->
 
-## About The Project
+## About
 
 A single page bootstrap template for event management company or wedding agency.
 
 <img src="assets/img/screenshot.png" width="400px" />
 
-### Built With
+## Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap 5](https://getbootstrap.com)
-* SCSS
-* Bootstrap Icons
-* [gLightBox](https://biati-digital.github.io/glightbox/#)
+List of major frameworks or technology used to build this project.
 
-### Features
-* Hero Image
-* Gallery
-* Contact Form
-* Google Map
-* Whatsapp Button
+- [Bootstrap 5](https://getbootstrap.com)
+- [SCSS](https://sass-lang.com)
+- [Bootstrap Icons](https://icons.getbootstrap.com)
+- [gLightBox](https://biati-digital.github.io/glightbox/#)
 
+## Features
 
+- Hero Section
+- Gallery Lightbox
+- Contact Form
+- Google Map
+- Whatsapp Button
+- 100% Responsive Layout Design
+- Smooth Scrolling
 
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
