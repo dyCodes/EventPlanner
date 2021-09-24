@@ -26,7 +26,7 @@ header {
 	.navbar {
 		padding-top: 1rem;
 		padding-bottom: 1rem;
-		background: rgba(0, 0, 0, 0.25);
+		background: rgba(0, 0, 0, 0.15);
 		transition: 0.2s;
 
 		.logo {
@@ -43,11 +43,11 @@ header {
 		.navbar-collapse {
 			a.nav_link {
 				color: #fff;
-				font-weight: 600;
-				font-size: 18px;
+				font-weight: 500;
 				padding: 5px;
-				margin-left: 20px;
+				margin-left: 22px;
 				letter-spacing: 0.2px;
+				font-family: 'Open Sans';
 
 				&.active,
 				&:hover {
@@ -70,9 +70,9 @@ footer {
 
 	.container .col-md-6 {
 		margin: 10px auto;
-		.bi {
-			font-size: 18px;
-		}
+	}
+	.social a i {
+		font-size: 19px;
 	}
 }
 // WHATSAPP BUTTON
@@ -113,7 +113,6 @@ footer {
 				color: #222;
 				display: block;
 				padding: 12px;
-				font-size: 16px;
 				margin: 0;
 				border-bottom: 1px solid #ddd;
 				&:hover {
