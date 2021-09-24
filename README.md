@@ -6,6 +6,10 @@ A single page bootstrap template for event management company or wedding agency.
 
 <img src="assets/img/screenshot.png" width="400px" />
 
+## Live Demo
+
+https://eventplanner-template.netlify.app/
+
 ## Built With
 
 List of major frameworks or technology used to build this project.
